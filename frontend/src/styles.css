@@ -1,0 +1,30 @@
+/* Import Tailwind's base styles */
+@tailwind base;
+
+/* Import Tailwind's component classes */
+@tailwind components;
+
+/* Import Tailwind's utility classes */
+@tailwind utilities;
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  font-family: "Arial", sans-serif;
+}
+
+h2 {
+  color: #007bff;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.container {
+  padding: 20px;
+}
