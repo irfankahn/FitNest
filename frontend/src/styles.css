@@ -1,30 +1,194 @@
 /* Import Tailwind's base styles */
 @tailwind base;
-
-/* Import Tailwind's component classes */
 @tailwind components;
-
-/* Import Tailwind's utility classes */
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* Global body styling */
 body {
+  background-image: url("./images/fitness.jpg"); /* Ensure the path is correct */
   background-color: #f8f9fa;
   color: #333;
-  font-family: "Arial", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
-h2 {
-  color: #007bff;
+/* Container for the dashboard */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-.card {
+/* Heading for the dashboard */
+.dashboard-heading {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Styling for the workout cards container */
+.workout-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px; /* Limit the width for larger screens */
+}
+
+/* Styling for each workout card */
+.workout-card {
+  width: 100%;
+  height: 350px; /* Adjust the height as needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.workout-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Overlay for the card */
+.workout-card-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+/* Title styling */
+.workout-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Description styling */
+.workout-card-description {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Button styling */
+.workout-card-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.workout-card-button:hover {
+  background-color: #0056b3;
+}
+
+/* No workouts message styling */
+.no-workouts {
+  font-size: 1.5rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Styling for login/register containers */
+.login-container,
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
   border-radius: 10px;
 }
 
-.card-title {
-  font-size: 1.5rem;
+/* Heading for login/register */
+.login-heading,
+.register-heading {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.container {
-  padding: 20px;
+/* Form styling */
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Label styling */
+.register-form label {
+  color: #ffffff; /* Set the label color to white */
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+/* Input field styling */
+.login-input,
+.register-input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  color: #333;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Slightly transparent background */
+}
+
+/* Input focus styling */
+.login-input:focus,
+.register-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Button styling */
+.login-button,
+.register-button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover,
+.register-button:hover {
+  background-color: #0056b3;
 }
