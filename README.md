@@ -1,4 +1,4 @@
-FitNest
+##FitNest
 FitNest is a full-stack fitness web application built with the MERN (MongoDB, Express, React, Node.js) stack. It allows users to register, log in, and manage their workouts and fitness routines. The app provides a simple and intuitive interface to track fitness progress and access personal workout details.
 
 Features
