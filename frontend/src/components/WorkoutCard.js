@@ -5,40 +5,31 @@ import PushupsImage from '../images/pushups.png';
 import SquatesImage from '../images/Squates.png';
 import PlankImage from '../images/Plank.png';
 import LungesImage from '../images/Lunges.png';
-import '../styles.css';
+import '../styles.css'; // Keep this for general styles if needed
 
 const WorkoutCard = ({ title, description, onClick }) => {
+    // Map the workout titles to imported images
     const workoutImages = {
-        Dumbells: `url(${DumbellsImage})`,
-        pushups: `url(${PushupsImage})`,
-        Squates: `url(${SquatesImage})`,
-        Plank: `url(${PlankImage})`,
-        Lunges: `url(${LungesImage})`,
+        Dumbells: DumbellsImage,
+        pushups: PushupsImage,
+        Squates: SquatesImage,
+        Plank: PlankImage,
+        Lunges: LungesImage,
     };
 
-    const backgroundImage = workoutImages[title] || '';
-    console.log('Background Image URL:', backgroundImage);
+    // Check if there is an image associated with the title
+    const cardBackgroundImage = workoutImages[title] ? `url(${workoutImages[title]})` : '';
+    const cardClass = `workout-card ${title.toLowerCase()}`;
 
     return (
         <Card
+            className={cardClass}
             style={{
-                width: '100%',
-                height: '350px',
-                backgroundImage: backgroundImage,
+                backgroundImage: cardBackgroundImage,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-                borderRadius: '10px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                color: '#fff',
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-                overflow: 'hidden',
-                position: 'relative',
-                transition: 'transform 0.3s, box-shadow 0.3s',
             }}
-            className="workout-card"
         >
             <div className="workout-card-overlay">
                 <Card.Title className="workout-card-title">{title}</Card.Title>

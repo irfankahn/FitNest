@@ -23,7 +23,7 @@ const Dashboard = () => {
     }, []);
 
     return (
-        <div className="dashboard-container">
+        <div className="dashboard-container" style={{ height: '100vh', overflow: 'hidden' }}>
             {error ? (
                 <div className="error-message">{error}</div>
             ) : (
@@ -44,6 +44,7 @@ const Dashboard = () => {
             )}
         </div>
     );
+    
 };
 
 export default Dashboard;

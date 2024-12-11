@@ -7,7 +7,7 @@
 
 /* Global body styling */
 body {
-  background-image: url("./images/fitness.jpg"); /* Ensure the path is correct */
+  background-image: url("./images/fitness.jpg");
   background-color: #f8f9fa;
   color: #333;
   font-family: "Poppins", sans-serif;
@@ -35,19 +35,24 @@ body {
   margin-bottom: 20px;
 }
 
-/* Styling for the workout cards container */
+/* Make the workout cards container fill the entire viewport */
 .workout-cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Adjust to fit as many cards as possible */
   gap: 20px;
-  width: 100%;
-  max-width: 1200px; /* Limit the width for larger screens */
+  width: 100vw;
+  height: 100vh; /* Full height of the viewport */
+  overflow: auto; /* Allow scrolling if needed */
+  padding: 20px;
 }
 
-/* Styling for each workout card */
+/* General card styling */
 .workout-card {
   width: 100%;
-  height: 350px; /* Adjust the height as needed */
+  height: 350px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -62,6 +67,7 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Hover effect */
 .workout-card:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -160,7 +166,7 @@ body {
   outline: none;
   font-size: 1rem;
   color: #333;
-  background-color: rgba(
+  background-color: #ccc(
     255,
     255,
     255,
