@@ -1,7 +1,7 @@
-##FitNest
+# Fitnest
 FitNest is a full-stack fitness web application built with the MERN (MongoDB, Express, React, Node.js) stack. It allows users to register, log in, and manage their workouts and fitness routines. The app provides a simple and intuitive interface to track fitness progress and access personal workout details.
 
-Features
+# Features
 User Authentication: Secure registration and login functionality.
 Workout Management: Users can create, update, and delete workouts.
 Responsive Design: A responsive UI for seamless use on desktop and mobile devices.
@@ -58,7 +58,7 @@ cd ../frontend
 npm start
 The frontend should now be running on http://localhost:3000, and the backend on http://localhost:5001.
 
-Usage
+# Usage
 Register a New User
 Navigate to the Register page on the frontend.
 Fill in the registration form with your name, email, and password.
@@ -89,7 +89,7 @@ Login Page
 
 Dashboard Page
 
-Deployment
+# Deployment
 You can deploy the frontend on platforms like Vercel or Netlify and the backend on Heroku, Render, or DigitalOcean.
 
 Deployment Tips
@@ -104,7 +104,7 @@ Create a pull request.
 License
 This project is licensed under the MIT License. You are free to use, modify, and distribute this code as long as you include the license.
 
-Acknowledgements
+# Acknowledgements
 MERN Stack for powering the app.
 React Bootstrap and Tailwind CSS for styling.
 MongoDB for the database.
