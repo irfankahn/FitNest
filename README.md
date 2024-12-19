@@ -39,13 +39,6 @@ cd ../frontend
 npm install
 Create a .env file in the backend folder and add the following variables:
 
-env
-
-MONGO_URI=mongodb://localhost:27017/fitnest
-JWT_SECRET=your_jwt_secret_key
-PORT=5001
-Replace your_jwt_secret_key with a secure random string for token generation.
-
 Run the backend server:
 
 
